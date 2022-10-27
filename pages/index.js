@@ -18,43 +18,42 @@ export default function Home() {
                 Satyadeep Roat
               </h1>
               <h2 className="text-gray-700 dark:text-gray-200 mb-4">
-                Frontend Engineer at{' '}
+                Frontend Engineer at XXX
                 <span className="font-semibold"></span>
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
-                {/* Helping developers build a faster web. Teaching about web
-                development, serverless, and React / Next.js. */}
+                Working on interesting problems for web and mobile. Trying to find meaning of life from running marathons.
               </p>
             </div>
             <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto">
               <Image
-                alt="Lee Robinson"
+                alt="Satyadeep roat"
                 height={176}
                 width={176}
                 src="/avatar.jpg"
                 sizes="30vw"
                 priority
-                className="rounded-full filter grayscale"
+                className="rounded-full filter"
               />
             </div>
           </div>
 
-          {/* <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
+          <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
             Featured Posts
           </h3>
           <div className="flex gap-6 flex-col md:flex-row">
             <BlogPostCard
-              title="Everything I Know About Style Guides, Design Systems, and Component Libraries"
+              title="The Psychology of running a sub 3 marathon"
               slug="style-guides-component-libraries-design-systems"
               gradient="from-[#D8B4FE] to-[#818CF8]"
             />
             <BlogPostCard
-              title="Rust Is The Future of JavaScript Infrastructure"
+              title="30 life lessons from 30 year old me"
               slug="rust"
               gradient="from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]"
             />
             <BlogPostCard
-              title="Past, Present, and Future of React State Management"
+              title="The art of letting go"
               slug="react-state-management"
               gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
             />
@@ -79,7 +78,7 @@ export default function Home() {
             </a>
           </Link>
 
-          <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-16 text-black dark:text-white">
+          {/* <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-16 text-black dark:text-white">
             Learn React & Next.js
           </h3>
           <p className="text-gray-600 dark:text-gray-400 mb-4">

@@ -1,28 +1,30 @@
 import Image from 'next/future/image';
 import { parseISO, format } from 'date-fns';
-import { PropsWithChildren, Suspense } from 'react';
+import { Suspense } from 'react';
 
-import Container from 'components/Container';
-import Subscribe from 'components/Subscribe';
-import ViewCounter from 'components/ViewCounter';
-import { Post } from 'lib/types';
-import { urlForImage } from 'lib/sanity';
+import Container from '../components/Container';
+import { PortableText } from '@portabletext/react';
+// import Subscribe from '../components/Subscribe';
+// import ViewCounter from '../components/ViewCounter';
+// import { urlForImage } from '../sanity';
 
 export default function BlogLayout({
-  children,
-  post
+  title,
+      body,
+      name,
+      ptComponents,
 }) {
   return (
     <Container
-      title={`${post.title} – Lee Robinson`}
-      description={post.excerpt}
-      image={urlForImage(post.coverImage).url()}
-      date={new Date(post.date).toISOString()}
+      title={`${title} – Lee Robinson`}
+      // description={post.excerpt}
+      // image={urlForImage(post.coverImage).url()}
+//      date={new Date(post.date).toISOString()}
       type="article"
     >
       <article className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">
-          {post.title}
+          {title}
         </h1>
         <div className="flex flex-col items-start justify-between w-full mt-2 md:flex-row md:items-center">
           <div className="flex items-center">
@@ -36,24 +38,27 @@ export default function BlogLayout({
             />
             <p className="ml-2 text-sm text-gray-700 dark:text-gray-300">
               {'Lee Robinson / '}
-              {format(parseISO(post.date), 'MMMM dd, yyyy')}
+              {/* {format(parseISO(post.date), 'MMMM dd, yyyy')} */}
             </p>
           </div>
           <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 min-w-32 md:mt-0">
-            {post.readingTime}
+            
             {` • `}
-            <ViewCounter slug={post.slug} />
+            {/* <ViewCounter slug={post.slug} /> */}
           </p>
         </div>
         <Suspense fallback={null}>
           <div className="w-full mt-4 prose dark:prose-dark max-w-none">
-            {children}
+             <PortableText
+         value={body}
+         components={ptComponents}
+       />
           </div>
-          <div className="mt-8">
+          {/* <div className="mt-8">
             <Subscribe />
-          </div>
+          </div> */}
           <div className="text-sm text-gray-700 dark:text-gray-300">
-            <a
+            {/* <a
               href={`https://mobile.twitter.com/search?q=${encodeURIComponent(
                 `https://leerob.io/blog/${post.slug}`
               )}`}
@@ -61,7 +66,7 @@ export default function BlogLayout({
               rel="noopener noreferrer"
             >
               {'Discuss on Twitter'}
-            </a>
+            </a> */}
             {` • `}
             <a
               href="https://github.com/leerob/leerob.io/issues"
