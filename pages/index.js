@@ -44,10 +44,10 @@ export default function Home() {
           <div className="flex gap-6 flex-col md:flex-row">
             <BlogPostCard
               title="The Psychology of running a sub 3 marathon"
-              slug="style-guides-component-libraries-design-systems"
+              slug="psychology-of-running-a-sub-3-marathon"
               gradient="from-[#D8B4FE] to-[#818CF8]"
             />
-            <BlogPostCard
+            {/* <BlogPostCard
               title="30 life lessons from 30 year old me"
               slug="rust"
               gradient="from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]"
@@ -56,7 +56,7 @@ export default function Home() {
               title="The art of letting go"
               slug="react-state-management"
               gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
-            />
+            /> */}
           </div>
           <Link href="/blog">
             <a className="flex mt-8 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6">
