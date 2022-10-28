@@ -1,12 +1,7 @@
-// [slug].js
 import groq from 'groq'
-// import imageUrlBuilder from '@sanity/image-url'
-import {PortableText} from '@portabletext/react'
 import client from '../../client'
 import BlogLayout from '../../layouts/blog';
-// function urlFor (source) {
-//   return imageUrlBuilder(client).image(source)
-// }
+
 
 const ptComponents = {
   types: {
@@ -19,7 +14,6 @@ const ptComponents = {
           alt={value.alt || ' '}
           loading="lazy"
           src=""
-       //   src={urlFor(value).width(320).height(240).fit('max').auto('format')}
         />
       )
     }
@@ -27,12 +21,10 @@ const ptComponents = {
 }
 
 const Post = ({post}) => {
-  console.log('jnknk', post);
+  console.log('njeknkenkeebnjek', post);
   const {
     title = 'Missing title',
     name = 'Missing name',
-    categories,
-    authorImage,
     body = []
   } = post
   return (
@@ -56,7 +48,6 @@ export async function getStaticPaths() {
   const paths = await client.fetch(
     groq`*[_type == "post" && defined(slug.current)][].slug.current`
   )
-
   return {
     paths: paths.map((slug) => ({params: {slug}})),
     fallback: true,

@@ -1,5 +1,4 @@
 import Image from 'next/future/image';
-import { parseISO, format } from 'date-fns';
 import { Suspense } from 'react';
 
 import Container from '../components/Container';
@@ -16,10 +15,7 @@ export default function BlogLayout({
 }) {
   return (
     <Container
-      title={`${title} – Lee Robinson`}
-      // description={post.excerpt}
-      // image={urlForImage(post.coverImage).url()}
-//      date={new Date(post.date).toISOString()}
+      title={`${title} – ${name}`}
       type="article"
     >
       <article className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
@@ -67,14 +63,6 @@ export default function BlogLayout({
             >
               {'Discuss on Twitter'}
             </a> */}
-            {` • `}
-            <a
-              href="https://github.com/leerob/leerob.io/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {'Suggest Change'}
-            </a>
           </div>
         </Suspense>
       </article>

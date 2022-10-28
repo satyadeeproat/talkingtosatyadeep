@@ -133,7 +133,6 @@ export default function Home() {
             </svg>
           </a>
           <span className="h-16" /> */}
-          {/* <Subscribe /> */}
         </div>
       </Container>
     </Suspense>
