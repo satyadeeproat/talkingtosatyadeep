@@ -42,30 +42,6 @@ const Post = ({post}) => {
       name={name}
       ptComponents={ptComponents}
     />
-    // <article>
-    //   <h1>{title}</h1>
-    //   <span>By {name}</span>
-    //   {categories && (
-    //     <ul>
-    //       Posted in
-    //       {categories.map(category => <li key={category}>{category}</li>)}
-    //     </ul>
-    //   )}
-    //   {authorImage && (
-    //     <div>
-    //       <img
-    //         src={urlFor(authorImage)
-    //           .width(50)
-    //           .url()}
-    //         alt={`${name}'s picture`}
-    //       />
-    //     </div>
-    //   )}
-    //   <PortableText
-    //     value={body}
-    //     components={ptComponents}
-    //   />
-    // </article>
   )
 }
 
