@@ -21,7 +21,14 @@ const ptComponents = {
 }
 
 const Post = ({post}) => {
-  console.log('njeknkenkeebnjek', post);
+  // console.log('njeknkenkeebnjek', post);
+  if(!post) {
+    post = {
+      title: '',
+      name: '',
+      body: []
+    }
+  }
   const {
     title = 'Missing title',
     name = 'Missing name',
@@ -55,7 +62,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  // It's important to default the slug so that it doesn't return "undefined"
   const { slug = "" } = context.params
   const post = await client.fetch(query, { slug })
   return {
