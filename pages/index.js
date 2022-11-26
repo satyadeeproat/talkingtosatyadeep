@@ -22,10 +22,10 @@ export default function Home() {
                 <span className="font-semibold"></span>
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
-                Working on interesting problems for web and mobile. Trying to find meaning of life from running marathons.
+                Working on interesting problems for web and mobile.
               </p>
             </div>
-            <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto">
+            {/* <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto">
               <Image
                 alt="Satyadeep roat"
                 height={176}
@@ -35,17 +35,22 @@ export default function Home() {
                 priority
                 className="rounded-full filter"
               />
-            </div>
+            </div> */}
           </div>
 
           <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
             Featured Posts
           </h3>
-          <div className="flex gap-6 flex-col md:flex-row">
+          <div className="flex gap-6 flex-row md:flex-row">            
             <BlogPostCard
               title="The Psychology of running a sub 3 marathon"
               slug="psychology-of-running-a-sub-3-marathon"
-              gradient="from-[#D8B4FE] to-[#818CF8]"
+              gradient="from-[#888888] to-[#888888]"
+            />
+            <BlogPostCard
+              title="30 Life Lessons from 30-year-old Me"
+              slug="30-life-lessons-from-30-year-old-me"
+              gradient="from-[#888888] to-[#888888]"
             />
             {/* <BlogPostCard
               title="30 life lessons from 30 year old me"
@@ -58,7 +63,7 @@ export default function Home() {
               gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
             /> */}
           </div>
-          <Link href="/blog">
+          {/* <Link href="/blog">
             <a className="flex mt-8 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6">
               Read all posts
               <svg
@@ -76,7 +81,7 @@ export default function Home() {
                 />
               </svg>
             </a>
-          </Link>
+          </Link> */}
 
           {/* <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-16 text-black dark:text-white">
             Learn React & Next.js

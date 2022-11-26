@@ -25,7 +25,7 @@ export default function BlogLayout({
         <div className="flex flex-col items-start justify-between w-full mt-2 md:flex-row md:items-center">
           <div className="flex items-center">
             <Image
-              alt="Lee Robinson"
+              alt="Satyadeep Roat"
               height={24}
               width={24}
               sizes="20vw"
@@ -33,7 +33,7 @@ export default function BlogLayout({
               className="rounded-full"
             />
             <p className="ml-2 text-sm text-gray-700 dark:text-gray-300">
-              {'Lee Robinson / '}
+              {'Satyadeep / '}
               {/* {format(parseISO(post.date), 'MMMM dd, yyyy')} */}
             </p>
           </div>

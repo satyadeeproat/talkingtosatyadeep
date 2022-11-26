@@ -33,7 +33,10 @@ export default function Container(props) {
   const { resolvedTheme, setTheme } = useTheme();
 
   // After mounting, we have access to the theme
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+    setTheme('dark');
+  }, []);
 
   const { children, ...customMeta } = props;
   const router = useRouter();
@@ -76,9 +79,9 @@ export default function Container(props) {
             <MobileMenu />
             <NavItem href="/" text="Home" />
             <NavItem href="/about" text="About" />
-            <NavItem href="/blog" text="Blog" />
+            {/* <NavItem href="/blog" text="Blog" /> */}
           </div>
-          <button
+          {/* <button
             aria-label="Toggle Dark Mode"
             type="button"
             className="w-9 h-9 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
@@ -111,7 +114,7 @@ export default function Container(props) {
                 )}
               </svg>
             )}
-          </button>
+          </button> */}
         </nav>
       </div>
       <main
