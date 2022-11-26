@@ -31,24 +31,11 @@ export default function About() {
           Worked as a full-stack engineer in the company at{' '}
             <a href="https://www.vdocipher.com/">Vdocipher</a>. I build company dashboard, end to end payment and multi tenant system.  
           </p>
-          {/* <div className="flex space-x-8">
-            <a href="/avatar.jpg">
-              <Image
-                width={400}
-                quality={100}
-                src={avatar}
-                className="rounded-md"
-              />
+          <div className="flex space-x-8">
+            <a href="https://ngl.link/satyadeeproat" target="_blank">
+                <h1 style={{color:'red'}}>Ask Me anything</h1>
             </a>
-            <a href="/avatar-bw.jpg">
-              <Image
-                width={400}
-                quality={100}
-                src={avatarBW}
-                className="rounded-md"
-              />
-            </a>
-          </div> */}
+          </div>
         </div>
       </div>
     </Container>
