@@ -18,7 +18,7 @@ export default function Home() {
                 Satyadeep Roat
               </h1>
               <h2 className="text-gray-700 dark:text-gray-200 mb-4">
-                Frontend Engineer at XXX
+                Frontend Engineer at Mollie
                 <span className="font-semibold"></span>
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
