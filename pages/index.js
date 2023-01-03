@@ -52,12 +52,12 @@ export default function Home() {
               slug="30-life-lessons-from-30-year-old-me"
               gradient="from-[#888888] to-[#888888]"
             />
-            {/* <BlogPostCard
-              title="30 life lessons from 30 year old me"
-              slug="rust"
-              gradient="from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]"
-            />
             <BlogPostCard
+              title="2022 Wrapped: Lis is unpredictable"
+              slug="2022-wrapped-life-is-unpredicatable"
+              gradient="from-[#888888] to-[#888888]"
+            />
+            {/* <BlogPostCard
               title="The art of letting go"
               slug="react-state-management"
               gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
