@@ -48,13 +48,13 @@ export default function Home() {
               gradient="from-[#888888] to-[#888888]"
             />
             <BlogPostCard
-              title="30 Life Lessons from 30-year-old Me"
-              slug="30-life-lessons-from-30-year-old-me"
+              title="Romaostia Half marathon 2023"
+              slug="romaostia-half-marathon-2023-race-report"
               gradient="from-[#888888] to-[#888888]"
             />
             <BlogPostCard
-              title="2022 Wrapped: Lis is unpredictable"
-              slug="2022-wrapped-life-is-unpredicatable"
+              title="Rotterdam Marathon 2023"
+              slug="rotterdam-marathon-2023"
               gradient="from-[#888888] to-[#888888]"
             />
             {/* <BlogPostCard
