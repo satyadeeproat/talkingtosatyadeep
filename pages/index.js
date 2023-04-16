@@ -54,7 +54,7 @@ export default function Home() {
             />
             <BlogPostCard
               title="Rotterdam Marathon 2023"
-              slug="rotterdam-marathon-2023"
+              slug="rotterdam-marathon-race-report-2023"
               gradient="from-[#888888] to-[#888888]"
             />
             {/* <BlogPostCard
