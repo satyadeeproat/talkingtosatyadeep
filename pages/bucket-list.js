@@ -25,12 +25,104 @@ const Card = ({title, gradient = "from-[#888888] to-[#888888]", onClick}) => (
 )
 
 const hashMap = {
-  '2023_goals': [{title: 'Get Fluent in dutch', checked: false}, {title: 'Run a marathon', checked: false}, {title: 'Learn Chess at intermediate level', checked: false}],
-  'countries': [{title: 'Netherlands', checked: true}, {title: 'France', checked: true}, {title: 'Austria', checked: true}, {title: 'Portugal', checked: true}],
-  'events': [
-    {title: 'Attend Porcupine Tree concert', checked: true},
-    {title: 'Run Rotterdam Marathon', checked: false}
-]  
+  "Yearly Goals":[
+     {
+        "title":"Get Fluent in dutch",
+        "checked":false
+     },
+     {
+        "title":"Run a marathon",
+        "checked":true
+     },
+     {
+      "title":"Learn Chess at intermediate level",
+      "checked":false
+   },
+   {
+    "title":"Run sub3 marathon",
+    "checked":false
+ },
+ {
+  "title":"Run sub 1:25 Half marathon",
+  "checked":false
+},
+{
+  "title":"Become a good cook",
+  "checked":false
+},
+{
+  "title":"Follow skin care routine regularly ",
+  "checked":false
+},
+{
+  "title":"Gym regularly",
+  "checked":false
+},
+{
+  "title":"run 3200km in 1 year",
+  "checked":false
+},
+{
+  "title":"Bike 100km non stop",
+  "checked":false
+},
+{
+  "title":"",
+  "checked":false
+},
+
+],
+  "countries":[
+    {
+      "title":"Denmark",
+      "checked":false
+    },
+    {
+      "title":"Germany",
+      "checked":false
+    },
+    {
+      "title":"UK",
+      "checked":false
+    },
+    
+     {
+        "title":"Netherlands",
+        "checked":true
+     },
+     {
+        "title":"France",
+        "checked":true
+     },
+     {
+        "title":"Austria",
+        "checked":true
+     },
+     {
+      "title":"Portugal",
+      "checked":true
+   },
+   {
+    "title":"Italy",
+    "checked":true
+ },
+
+],
+  "events":[
+     {
+        "title":"Attend Porcupine Tree concert",
+        "checked":true
+     },
+     {
+      "title":"Run Rotterdam Marathon",
+      "checked":true
+   },
+   {
+    "title":"Attend Harry styles concert",
+    "checked":false
+ },
+ 
+  ]
 }
 const BucketList = () => {
   const [currentTab, setTab] = React.useState('2023_goals');
@@ -46,7 +138,7 @@ const BucketList = () => {
                       <div className="flex gap-6 flex-row lg:flex-row">     
                       <Card title={'2022 Goals'}  onClick={() => setTab('2023_goals')}/>
                       <Card title={'Countries'} onClick={() => setTab('countries')}/>
-                      {/* <Card title={'Races'}  onClick={() => setTab('countries')}/> */}
+                      {/* <Card title={'Races'}  onClick={() => setTab('races')}/> */}
                       <Card title={'Events'}  onClick={() => setTab('events')}/>
 
                        
