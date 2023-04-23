@@ -125,7 +125,7 @@ const hashMap = {
   ]
 }
 const BucketList = () => {
-  const [currentTab, setTab] = React.useState('2023_goals');
+  const [currentTab, setTab] = React.useState('yearly-goals');
     return (
         <Suspense fallback={null}>
         <Container>
@@ -136,7 +136,7 @@ const BucketList = () => {
         </h1>
         
                       <div className="flex gap-6 flex-row lg:flex-row">     
-                      <Card title={'Yearly Goals'}  onClick={() => setTab('2023_goals')}/>
+                      <Card title={'Yearly Goals'}  onClick={() => setTab('yearly-goals')}/>
                       <Card title={'Countries'} onClick={() => setTab('countries')}/>
                       {/* <Card title={'Races'}  onClick={() => setTab('races')}/> */}
                       <Card title={'Events'}  onClick={() => setTab('events')}/>
@@ -153,7 +153,7 @@ const BucketList = () => {
           <a
             className="font-medium text-gray-900 dark:text-gray-100 truncate w-60 sm:w-96 md:w-full"
           >
-            {item.title}
+            {item.checked ?  <s>{item.title}</s> : item.title}
           </a>
         </div>
       </div>
