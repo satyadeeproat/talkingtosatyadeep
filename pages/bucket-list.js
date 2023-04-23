@@ -25,7 +25,7 @@ const Card = ({title, gradient = "from-[#888888] to-[#888888]", onClick}) => (
 )
 
 const hashMap = {
-  "Yearly Goals":[
+  "yearly-goals":[
      {
         "title":"Get Fluent in dutch",
         "checked":false
@@ -136,7 +136,7 @@ const BucketList = () => {
         </h1>
         
                       <div className="flex gap-6 flex-row lg:flex-row">     
-                      <Card title={'2022 Goals'}  onClick={() => setTab('2023_goals')}/>
+                      <Card title={'Yearly Goals'}  onClick={() => setTab('2023_goals')}/>
                       <Card title={'Countries'} onClick={() => setTab('countries')}/>
                       {/* <Card title={'Races'}  onClick={() => setTab('races')}/> */}
                       <Card title={'Events'}  onClick={() => setTab('events')}/>
