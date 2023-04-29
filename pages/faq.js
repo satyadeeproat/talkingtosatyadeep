@@ -20,14 +20,10 @@ export default function About() {
                 
             </div>
             <div>
-            <a href="https://ngl.link/satyadeeproat" target="_blank" rel="noreferrer">
+            <a href="https://ngl.link/sattu400mh" target="_blank" rel="noreferrer">
               Click here to write
             </a>
 
-            <p>
-                You can see all the latest features coming soon on this {' '}
-                <a href="https://trello.com/b/YnKWP7Y9/satyadeep" target="_blank" rel="noreferrer">Trello board</a>
-            </p>
 
           </div>
         </div>
