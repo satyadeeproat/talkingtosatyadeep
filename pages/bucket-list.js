@@ -3,42 +3,18 @@ import cn from 'classnames';
 import { Suspense } from 'react';
 import Container from '../components/Container';
 
-const Card = ({title, gradient = "from-[#888888] to-[#888888]", onClick}) => (
-    
-    <a
-    className={cn(
-      'transform hover:scale-[1.01] transition-all',
-      'rounded-xl w-full lg:w-1/3 bg-gradient-to-r p-1',
-      gradient
-    )}
-    onClick={onClick}
-  >
-    <div className="flex flex-col justify-between h-full bg-white dark:bg-gray-900 rounded-lg p-4" style={{height: 60, width: 150}}>
-      <div className="flex flex-col lg:flex-row justify-between">
-        <h4 className="text-lg lg:text-lg font-medium mb-6 sm:mb-10 w-full text-gray-900 dark:text-gray-100 tracking-tight" style={{textAlign: 'center'}}>
-          {title}
-        </h4>
-      </div>
-      <div className="flex items-center text-gray-800 dark:text-gray-200 capsize">
-</div></div>
-      </a>
-)
 
 const hashMap = {
   "yearly-goals":[
-     {
-        "title":"Get Fluent in dutch",
-        "checked":false
-     },
      {
         "title":"Run a marathon",
         "checked":true
      },
      {
-      "title":"Learn Chess at intermediate level",
+      "title":"Get Fluent in dutch",
       "checked":false
    },
-   {
+ {
     "title":"Run sub3 marathon",
     "checked":false
  },
@@ -59,18 +35,13 @@ const hashMap = {
   "checked":false
 },
 {
-  "title":"run 3200km in 1 year",
+  "title":"run 3000km in 1 year",
   "checked":false
 },
 {
   "title":"Bike 100km non stop",
   "checked":false
 },
-{
-  "title":"",
-  "checked":false
-},
-
 ],
   "countries":[
     {
@@ -79,11 +50,15 @@ const hashMap = {
     },
     {
       "title":"Germany",
-      "checked":false
+      "checked":true
     },
     {
-      "title":"UK",
-      "checked":false
+      "title":"Czech Republic",
+      "checked":true
+    },
+    {
+      "title":"Hungary",
+      "checked":true
     },
     
      {
@@ -119,50 +94,83 @@ const hashMap = {
    },
    {
     "title":"Attend Harry styles concert",
-    "checked":false
+    "checked":true
  },
- 
+ {
+  "title":"Attend Lana Del Rey concert",
+  "checked":true
+},
+{
+  "title":"Attend Radwimp concert",
+  "checked":true
+},
+{
+  "title":"See World Championship live",
+  "checked":true
+},
+
   ]
 }
+
+
+const Tab = ({ title, active, onClick }) => (
+  <button
+    className={cn(
+      'px-4 py-2 font-medium border-b-2 focus:outline-none',
+      {
+        'border-blue-500': active,
+        'border-transparent hover:border-gray-300': !active,
+      }
+    )}
+    onClick={onClick}
+  >
+    {title}
+  </button>
+);
+
+const Card = ({ title, active, onClick }) => (
+  <Tab title={title} active={active} onClick={onClick} />
+);
+
+// export default Card;
+
+
 const BucketList = () => {
   const [currentTab, setTab] = React.useState('yearly-goals');
-    return (
-        <Suspense fallback={null}>
-        <Container>
+
+  return (
+    <Suspense fallback={null}>
+      <Container>
         <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto w-full mb-8">
-
-        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
-          Bucket List
-        </h1>
-        
-                      <div className="flex gap-6 flex-row lg:flex-row">     
-                      <Card title={'Yearly Goals'}  onClick={() => setTab('yearly-goals')}/>
-                      <Card title={'Countries'} onClick={() => setTab('countries')}/>
-                      {/* <Card title={'Races'}  onClick={() => setTab('races')}/> */}
-                      <Card title={'Events'}  onClick={() => setTab('events')}/>
-
-                       
-</div>
-<div>
-      {hashMap[currentTab].map((item, index) => (
-        <div key={index} className="flex flex-row items-baseline border-b border-gray-200 dark:border-gray-800 max-w-3xl w-full mt-8">
-        <p className="text-sm font-bold text-gray-400 dark:text-gray-600">
-        {index+1}
-        </p>
-        <div className="flex flex-col pl-3">
-          <a
-            className="font-medium text-gray-900 dark:text-gray-100 truncate w-60 sm:w-96 md:w-full"
-          >
-            {item.checked ?  <s>{item.title}</s> : item.title}
-          </a>
+          <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
+            Bucket List
+          </h1>
+          <div className="flex gap-6 flex-row lg:flex-row">
+            <Card title={'Yearly Goals'} onClick={() => setTab('yearly-goals')} />
+            <Card title={'Countries'} onClick={() => setTab('countries')} />
+            <Card title={'Events'} onClick={() => setTab('events')} />
+          </div>
+          <div>
+            {hashMap[currentTab].map((item, index) => (
+              <div key={index} className="flex flex-row items-baseline border-b border-gray-200 dark:border-gray-800 max-w-3xl w-full mt-8">
+                <p className="text-sm font-bold text-gray-400 dark:text-gray-600">
+                  {index + 1}
+                </p>
+                <div className="flex flex-col pl-3">
+                  <a
+                    className="font-medium text-gray-900 dark:text-gray-100 truncate w-60 sm:w-96 md:w-full"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    {item.checked ? <s>{item.title}</s> : item.title}
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-      ))}
-</div>
-</div>
-        </Container>
-        </Suspense>
-    )
+      </Container>
+    </Suspense>
+  )
 }
 
 export default BucketList;
