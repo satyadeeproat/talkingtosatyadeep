@@ -1,5 +1,4 @@
 import { serialize } from 'next-mdx-remote/serialize';
-import readingTime from 'reading-time';
 import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
 import rehypeCodeTitles from 'rehype-code-titles';
@@ -26,14 +25,8 @@ export async function mdxToHtml(source) {
       format: 'mdx'
     }
   });
-  console.log('jrnkgjr' , mdxSource);
-//  const tweetMatches = source.match(/<StaticTweet\sid="[0-9]+"\s\/>/g);
-//  const tweetIDs = tweetMatches?.map((tweet) => tweet.match(/[0-9]+/g)[0]);
 
   return {
     html: mdxSource,
-    // tweetIDs: tweetIDs || [],
-    // wordCount: source.split(/\s+/gu).length,
-//    readingTime: readingTime(source).text
   };
 }
